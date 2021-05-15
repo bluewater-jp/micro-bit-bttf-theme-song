@@ -1,7 +1,27 @@
+function main3 () {
+    music.playTone(740, music.beat(BeatFraction.Whole))
+    music.playTone(698, music.beat(BeatFraction.Quarter))
+    music.playTone(622, music.beat(BeatFraction.Quarter))
+    music.playTone(698, music.beat(BeatFraction.Half))
+    music.playTone(622, music.beat(BeatFraction.Half))
+    music.playTone(554, music.beat(BeatFraction.Half))
+    music.playTone(622, music.beat(BeatFraction.Double))
+    music.playTone(831, music.beat(BeatFraction.Whole))
+    music.playTone(740, music.beat(BeatFraction.Whole))
+    music.playTone(698, music.beat(BeatFraction.Quarter))
+    music.playTone(622, music.beat(BeatFraction.Quarter))
+    music.playTone(698, music.beat(BeatFraction.Half))
+    music.playTone(622, music.beat(BeatFraction.Half))
+    music.playTone(554, music.beat(BeatFraction.Half))
+    music.playTone(622, music.beat(BeatFraction.Double))
+    music.rest(music.beat(BeatFraction.Whole))
+}
 function main2 () {
     music.playTone(554, music.beat(BeatFraction.Whole))
     music.playTone(370, music.beat(BeatFraction.Whole))
     music.playTone(523, music.beat(BeatFraction.Whole))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
     music.playTone(622, music.beat(BeatFraction.Quarter))
     music.playTone(554, music.beat(BeatFraction.Half))
     music.playTone(466, music.beat(BeatFraction.Half))
@@ -31,6 +51,8 @@ function main1 () {
     music.playTone(415, music.beat(BeatFraction.Whole))
     music.playTone(277, music.beat(BeatFraction.Whole))
     music.playTone(392, music.beat(BeatFraction.Whole))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Quarter))
     music.playTone(466, music.beat(BeatFraction.Quarter))
     music.playTone(415, music.beat(BeatFraction.Half))
     music.playTone(349, music.beat(BeatFraction.Half))
@@ -53,6 +75,17 @@ function main1 () {
     music.playTone(622, music.beat(BeatFraction.Quarter))
     music.playTone(831, music.beat(BeatFraction.Quarter))
 }
+function main4 () {
+    music.playTone(554, music.beat(BeatFraction.Whole))
+    music.playTone(466, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Whole))
+    music.playTone(622, music.beat(BeatFraction.Whole))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(554, music.beat(BeatFraction.Whole))
+    music.playTone(740, music.beat(BeatFraction.Whole))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(622, music.beat(BeatFraction.Double))
+}
 function start () {
     start1()
     music.playTone(415, music.beat(BeatFraction.Whole))
@@ -64,11 +97,16 @@ function start () {
     music.playTone(415, music.beat(BeatFraction.Breve))
     music.rest(music.beat(BeatFraction.Breve))
 }
-music.setTempo(96)
 music.setVolume(255)
+music.setTempo(96)
 start()
+music.setTempo(90)
 main1()
 main2()
+music.setTempo(135)
+main3()
+music.setTempo(90)
+main4()
 basic.forever(function () {
 	
 })
